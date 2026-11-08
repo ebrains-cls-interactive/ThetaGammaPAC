@@ -8,11 +8,10 @@ from clsiwidgets.ui.cls_sa_widget import CLSSAWidget
 
 
 class JobSettingWidget(ipywidgets.VBox, BaseWidget):
-    def __init__(self, data_path, transfer_path, title: str = "Run simulation", default_value: str | None = None):
+    def __init__(self, data_path, title: str = "Run simulation", default_value: str | None = None):
         super().__init__()
 
         self._data_path = data_path
-        self._transfer_path = transfer_path
         self._widget_title = title
 
         self._header = ipywidgets.HTML(value=f"<h3>{self._widget_title}</h3>")

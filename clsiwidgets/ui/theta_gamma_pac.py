@@ -29,7 +29,6 @@ class TGPSimulation(ipywidgets.VBox, BaseWidget):
         load_dotenv(paths["env_path"])
 
         data_path = paths["data_path"]
-        transfer_path = paths["transfer_path"]
         results_path = paths["results_path"]
 
         self.job_manager = JobManager(data_path=data_path, results_path=results_path)
@@ -43,7 +42,7 @@ class TGPSimulation(ipywidgets.VBox, BaseWidget):
 
         data_section = ipywidgets.VBox([self.data_box, self.data_selector])
 
-        self.job_settings = JobSettingWidget(data_path, transfer_path)
+        self.job_settings = JobSettingWidget(data_path)
 
         self.submit_sweep_button = ipywidgets.Button(
             description="Submit sweep",
