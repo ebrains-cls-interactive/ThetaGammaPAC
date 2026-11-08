@@ -1,0 +1,82 @@
+{
+    "olm_pc_gaba_tau": {
+        "label": "OLM→PYR GABA decay time constant (ms)",
+        "default": 10.3,
+        "min": 8.0,
+        "max": 18.0,
+        "type": "float",
+        "desc": "Inhibitory synapse kinetics: longer decay → slower theta, stronger PAC."
+    },
+    "olm_pc_conprob": {
+        "label": "OLM→PYR connection probability",
+        "default": 0.4,
+        "min": 0.2,
+        "max": 0.6,
+        "type": "float",
+        "desc": "Higher → stronger OLM drive on PYR distal dendrites → more robust theta-gamma PAC."
+    },
+    "olm2pcDep": {
+        "label": "OLM→PYR short-term depression time constant (ms)",
+        "default": 1770.0,
+        "min": 500.0,
+        "max": 3000.0,
+        "type": "float",
+        "desc": "Higher D → deeper depression → PYR escapes inhibition faster → theta may speed up."
+    },
+    "olm2pcFac": {
+        "label": "OLM→PYR short-term facilitation time constant (ms)",
+        "default": 6.0,
+        "min": 0.0,
+        "max": 50.0,
+        "type": "float",
+        "desc": "Higher → stronger later IPSPs on PYR → may slow theta and increase gamma synchrony."
+    },
+    "pc_olm_conprob": {
+        "label": "PYR→OLM connection probability",
+        "default": 0.35,
+        "min": 0.15,
+        "max": 0.55,
+        "type": "float",
+        "desc": "Excitatory feedback: most direct lever on the OLM-PYR feedback loop and PAC."
+    },
+    "pv_pc_conprob": {
+        "label": "PVBC→PYR connection probability",
+        "default": 0.25,
+        "min": 0.1,
+        "max": 0.5,
+        "type": "float",
+        "desc": "Perisomatic inhibition: higher → cleaner, stronger gamma oscillations."
+    },
+    "pvbc2pcDep": {
+        "label": "PVBC→PYR STP depression time constant (ms)",
+        "default": 965.0,
+        "min": 400.0,
+        "max": 1500.0,
+        "type": "float",
+        "desc": "Higher D → longer inhibitory window per gamma cycle → lower gamma frequency."
+    },
+    "pc_pv_conprob": {
+        "label": "PYR→PVBC connection probability",
+        "default": 0.35,
+        "min": 0.15,
+        "max": 0.55,
+        "type": "float",
+        "desc": "Excitatory drive to fast interneurons: higher → stronger PING gamma."
+    },
+    "pc_pc_conprob": {
+        "label": "PYR→PYR recurrent connection probability",
+        "default": 0.35,
+        "min": 0.05,
+        "max": 0.5,
+        "type": "float",
+        "desc": "Recurrent excitation: illustrates E-I balance; too high → runaway activity."
+    },
+    "artifperpyr": {
+        "label": "Number of SC input fibers per PYR cell (SCIL proxy)",
+        "default": 76,
+        "min": 40,
+        "max": 150,
+        "type": "int",
+        "desc": "Main control of the operating point. PAC emerges roughly between 60-110."
+    }
+}

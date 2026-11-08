@@ -1,0 +1,69 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "clsi-widgets"
+readme = "README.md"
+version = "0.1.0a1"
+description = "Fitting synaptic events using data and model in NeuroInformatics Platform"
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
+classifiers = [
+    "Framework :: Jupyter",
+    "Framework :: Jupyter :: JupyterLab",
+    "Framework :: Jupyter :: JupyterLab :: 4",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "ipywidgets",
+    "IPython",
+    "requests",
+    "importlib_resources",
+    "pytz",
+    "python-dateutil",
+    "pandas",
+    "numpy",
+    "plotly",
+    "anywidget",
+    "pydantic",
+    "python-dotenv",
+]
+
+keywords = ["synapses", "fitting", "event", "data", "model"]
+authors = [
+    { "name" = "Astrid Correa", "email" = "astrid.correa@ibf.cnr.it" },
+    { "name" = "Luca Leonardo Bologna", "email" = "lucaleonardo.bologna@cnr.it" },
+    { "name" = "Carmen Alina Lupascu", "email" = "carmen.lupascu@ibf.cnr.it" },
+    { "name" = "Roberto Smiriglia", "email" = "roberto.smiriglia@ibf.cnr.it" },
+    { "name" = "Teodora Misan", "email" = "teodora.misan@codemart.ro" },
+    { "name" = "Lia Domide", "email" = "lia.domide@codemart.ro" }
+]
+
+[project.optional-dependencies]
+neuron = [
+    "neuron"
+]
+
+test = [
+    "pytest",
+]
+
+[project.urls]
+Homepage = "https://github.com/ebrains-cls-interactive/ThetaGammaPAC.git"
+
+[tool.hatch.build.targets.wheel]
+include = [
+    "clsiwidgets/",
+]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "clsiwidgets/",
+]

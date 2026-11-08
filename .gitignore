@@ -1,0 +1,11 @@
+__pycache__/
+.mypy_cache/
+.venv/
+.env
+.vscode/
+.pytest_cache/
+
+data/job_registry.json
+results/
+
+.DS_Store
