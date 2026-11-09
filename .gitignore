@@ -5,7 +5,7 @@ __pycache__/
 .vscode/
 .pytest_cache/
 
-data/job_registry.json
+job_registry.json
 results/
 
 .DS_Store

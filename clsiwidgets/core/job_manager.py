@@ -180,7 +180,7 @@ class JobManager:
                     token=retrieve_token()
                 )
             elif job.service == 'CLS-Service-Account':
-                job_info = CLSSAService.get_job(id=job.id)
+                job_info = CLSSAService.get_job(job_id=job.id)
             else:
                 raise ValueError(f'Job service {job.service} not valid')
 
